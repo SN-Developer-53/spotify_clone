@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
-import 'package:spotify_clone/presentation/screens/login_screen.dart';
+import 'package:spotify_clone/presentation/screens/main_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -15,7 +15,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Future.delayed(
         const Duration(seconds: 3),
         () => Navigator.pushReplacement(context,
-            MaterialPageRoute(builder: (context) => const LoginScreen())));
+            MaterialPageRoute(builder: (context) => const MainScreen())));
     super.initState();
   }
 
@@ -30,7 +30,7 @@ class _SplashScreenState extends State<SplashScreen> {
             children: [
               Image.asset(
                 'assets/images/spotifylogo.png',
-                width: 50.w,
+                width: 35.w,
                 fit: BoxFit.cover,
               ),
               SizedBox(
