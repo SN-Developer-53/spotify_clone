@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:spotify_clone/presentation/screens/dashboard_screen.dart';
+import 'package:spotify_clone/presentation/screens/dashborad_Screen.dart';
+import 'package:spotify_clone/presentation/screens/home_screen.dart';
 import 'package:spotify_clone/presentation/screens/login_without_password_screen.dart';
 
 class LogInScreen extends StatefulWidget {
@@ -105,7 +106,7 @@ class _LogInScreenState extends State<LogInScreen> {
                   child: ElevatedButton(
                       onPressed: () {
                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => const DashboardScreen()));
+                              builder: (context) => const Dashboard()));
                       },
                       style: ElevatedButton.styleFrom(
                           elevation: 10,
