@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotify_clone/presentation/screens/music_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -286,75 +287,80 @@ class HomeScreen extends StatelessWidget {
                 const SizedBox(
                   height: 10,
                 ),
-                Container(
-                  height: 130,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(5),
-                    color: Color.fromARGB(255, 46, 46, 46),
-                  ),
-                  child: Row(
-                    children: [
-                      Container(
-                        height: 300,
-                        width: 150,
-                         decoration:  const BoxDecoration(image: DecorationImage(image:AssetImage('assets/images/image7.jpg'),fit: BoxFit.fill),
-                                  borderRadius: BorderRadius.only(
-                                    topLeft: Radius.circular(5),
-                                    bottomLeft: Radius.circular(5)
-                                  )
-                                ),
-                        
-                      ),
-                      const SizedBox(
-                        width: 10,
-                      ),
-                      Container(
-                        height: 120,
-                        width: 180,
-                        // color: Colors.indigo,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const Text(
-                              'Viral hits',
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 15),
-                            ),
-                            const SizedBox(
-                              height: 5,
-                            ),
-                            const Text(
-                              'Playlist # The Kid LAROI,\nOlivia Rodrigo,Arina ...',
-                              style:
-                                  TextStyle(color: Colors.grey, fontSize: 13),
-                            ),
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            Row(
-                              children: const [
-                                Icon(
-                                  Icons.favorite_border_outlined,
-                                  color: Colors.white,
-                                  size: 25,
-                                ),
-                                SizedBox(
-                                  width: 50,
-                                ),
-                                Icon(
-                                  Icons.play_circle_fill_outlined,
-                                  color: Colors.white,
-                                  size: 25,
-                                ),
-                              ],
-                            ),
-                          ],
+                GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => const MusicScreen()));
+                  },
+                  child: Container(
+                    height: 130,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(5),
+                      color: Color.fromARGB(255, 46, 46, 46),
+                    ),
+                    child: Row(
+                      children: [
+                        Container(
+                          height: 300,
+                          width: 150,
+                           decoration:  const BoxDecoration(image: DecorationImage(image:AssetImage('assets/images/image7.jpg'),fit: BoxFit.fill),
+                                    borderRadius: BorderRadius.only(
+                                      topLeft: Radius.circular(5),
+                                      bottomLeft: Radius.circular(5)
+                                    )
+                                  ),
+                          
                         ),
-                      )
-                    ],
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          height: 120,
+                          width: 180,
+                          // color: Colors.indigo,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const Text(
+                                'Viral hits',
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 15),
+                              ),
+                              const SizedBox(
+                                height: 5,
+                              ),
+                              const Text(
+                                'Playlist # The Kid LAROI,\nOlivia Rodrigo,Arina ...',
+                                style:
+                                    TextStyle(color: Colors.grey, fontSize: 13),
+                              ),
+                              const SizedBox(
+                                height: 10,
+                              ),
+                              Row(
+                                children: const [
+                                  Icon(
+                                    Icons.favorite_border_outlined,
+                                    color: Colors.white,
+                                    size: 25,
+                                  ),
+                                  SizedBox(
+                                    width: 50,
+                                  ),
+                                  Icon(
+                                    Icons.play_circle_fill_outlined,
+                                    color: Colors.white,
+                                    size: 25,
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 ),
                 const SizedBox(
